@@ -1,0 +1,23 @@
+userdata[
+    // Il faut faire 10 users
+    {
+        "id": 1, // un id qui change a chaque fois
+        "pseudo": "un pseudo", // un pseudo qui change a chaque fois
+        "email": "un email", // un emamail qui change a chaque fois
+        "mdp": "un mot de pass"
+ 
+    }
+]
+
+seed[
+    // il faut faire une 20 ene de graine differente au moin deux par utilisateur
+    {   
+        
+        "id": 1,// un id qui change a chaque fois
+        "user_id" : 1, // ID d'un utilisateur existant
+        "category": "Tomate", // a choire entre [Tomate, Courgette, Aubergine, Haricot]
+        "variety": "Roma", // mettre une variéter au hasard
+        "description": "Pousse par grape et tres bonne pour les sauce",//une description de la variété
+        "conseil": "Bien tuteuré et au soleil"// un conseil pour la culture
+    }
+]

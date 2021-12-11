@@ -1,0 +1,11 @@
+// === IMPORT CSS ===
+@use 'src/styles/vars';
+
+.myseeds {
+  height: 100%;
+}
+
+.myseeds .footer-desktop {
+  position: fixed;
+  bottom: 0;
+}

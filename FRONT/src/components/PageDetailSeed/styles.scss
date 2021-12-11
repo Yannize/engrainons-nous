@@ -1,0 +1,11 @@
+// === IMPORT CSS ===
+@use 'src/styles/vars';
+
+.page-detail-seed {
+  height: 100%;
+}
+
+.page-detail-seed .footer-desktop {
+  position: fixed;
+  bottom: 0;
+}

@@ -1,0 +1,52 @@
+@use 'src/styles/vars';
+
+// Mobile
+.filter {
+  .linkReset {
+    text-decoration: underline;
+    color: vars.$link-before-hover-color;
+    font-weight: bold;
+  }
+  .linkReset:hover {
+    color: vars.$bg-primary-color;
+    cursor: pointer;
+  }
+
+  .filterComponent {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+// Tablet
+@media only screen and (min-width: 599px) {
+  .filter {
+    width: fit-content;
+
+    margin: 2.5rem auto;
+    padding: 1.5rem 1.5rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+
+    .linkReset {
+      margin-top: -10px;
+    }
+
+    .filterComponent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+// Desktop
+@media only screen and (min-width: 1025px) {
+  .filter {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

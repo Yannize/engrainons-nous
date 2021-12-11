@@ -1,0 +1,181 @@
+@use 'src/styles/vars';
+
+.navbar-mobile {
+  z-index: 2;
+
+  position: relative;
+  font-size: 20px; // FontAwesome Icon Size
+
+  width: 100%;
+
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: vars.$bg-footer-color;
+
+  padding: 0.8rem 1.8rem;
+
+  .messagerie {
+    position: relative;
+  }
+  .new-message-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 0.7rem;
+    color: white;
+    font-weight: bold;
+      background-color: #bc1536;
+    border-radius: 50%;
+    bottom: 0px;
+    left: -10px;
+  }
+
+  .menu-burger {
+
+    .barre {
+      position: absolute;
+      width: 1rem;
+      height: 0.2rem;
+      border-radius: 3px;
+      background-color: vars.$icon-navbar-bg-color;
+      transition: 0.3s;
+      bottom: 1.45rem;
+      right: 25px;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 1rem;
+        height: 0.2rem;
+        border-radius: 3px;
+        background-color: vars.$icon-navbar-icon-text-color;
+        transform: translateY(-0.4rem);
+        transition: 0.3s;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 1rem;
+        height: 0.2rem;
+        border-radius: 3px;
+        background-color: vars.$icon-navbar-icon-text-color;
+        transform: translateY(0.4rem);
+        transition: 0.3s;
+      }
+
+      
+    }
+
+    &.menu-burger--active{
+      .barre {
+        background-color: vars.$bg-footer-color;
+        transform: rotate(180deg);
+        width: 1.3rem;
+        height: 0.25rem;
+      }
+
+      :after {
+        background-color: vars.$icon-navbar-bg-color;
+        transform: rotate(-45deg);
+        width: 1.3rem;
+        height: 0.25rem;
+      }
+
+      :before {
+        background-color: vars.$icon-navbar-bg-color;
+        transform: rotate(45deg);
+        width: 1.3rem;
+        height: 0.25rem;
+      }
+    }
+  }
+
+  .faUserAlt {
+    color: vars.$icon-navbar-icon-text-color;
+  }
+  
+  .navbar_link--active {
+    .faUserAlt {
+      color: vars.$bg-primary-color;
+    }
+  }
+}
+
+
+
+
+@media only screen and (min-width: 599px) {
+  .navbar-mobile {
+    font-size: 36px; // FontAwesome Icon Size
+
+    background-color: vars.$bg-footer-color;
+  
+    padding: 1.2rem 6rem;
+
+    .new-message-counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      font-size: 1rem;
+      color: white;
+      font-weight: bold;
+      background-color: #bc1536;
+      border-radius: 50%;
+      bottom: 0px;
+      left: -10px;
+    }
+
+    .menu-burger {
+    
+      .barre {
+        width: 2.1rem;
+        height: 0.35rem;
+        bottom: 2.2rem;
+        right: 6rem;
+    
+        &:before {
+          width: 2.1rem;
+          height: 0.35rem;
+          transform: translateY(-0.7rem);
+        }
+    
+        &:after {
+          width: 2.1rem;
+          height: 0.35rem;
+          transform: translateY(0.7rem);
+        }
+    
+        
+      }
+    
+      &.menu-burger--active{
+        .barre {
+          height: 0.43rem;
+          width: 2.3rem;
+        }
+    
+        :after {
+          height: 0.43rem;
+          width: 2.3rem;
+        }
+    
+        :before {
+          height: 0.43rem;
+          width: 2.3rem;
+        }
+      }
+    }
+  }
+}

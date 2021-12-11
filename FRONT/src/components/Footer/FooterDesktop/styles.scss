@@ -1,0 +1,25 @@
+// === IMPORT CSS ===
+@use 'src/styles/vars';
+
+.footer-desktop {
+  padding: 1.4rem;
+
+  background-color: vars.$bg-footer-color;
+
+  color: vars.$bg-btn-hover-color;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  a {
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: vars.$link-hover-color;
+    text-decoration: underline;
+  }
+}
